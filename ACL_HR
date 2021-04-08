@@ -1,0 +1,9 @@
+Router#
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#access-list 1 deny 193.168.0.0 0.0.0.255
+Router(config)#access-list 1 permit any
+Router(config)#interface fastEthernet 1/0
+Router(config-if)#ip access-group 1 out
+Router(config-if)#exit
+Router(config)#
